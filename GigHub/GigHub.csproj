@@ -186,6 +186,10 @@
     <Compile Include="Migrations\202102120830310_OverrideConventionsOverGenresandGigs.Designer.cs">
       <DependentUpon>202102120830310_OverrideConventionsOverGenresandGigs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102121244403_AddForgeKeyPropertiestoGig.cs" />
+    <Compile Include="Migrations\202102121244403_AddForgeKeyPropertiestoGig.Designer.cs">
+      <DependentUpon>202102121244403_AddForgeKeyPropertiestoGig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -280,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102120830310_OverrideConventionsOverGenresandGigs.resx">
       <DependentUpon>202102120830310_OverrideConventionsOverGenresandGigs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102121244403_AddForgeKeyPropertiestoGig.resx">
+      <DependentUpon>202102121244403_AddForgeKeyPropertiestoGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
