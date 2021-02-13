@@ -111,3 +111,4 @@ C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.csproj.GenerateR
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.CreateGigTable.resources
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.OverrideConventionsOverGenresandGigs.resources
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddForgeKeyPropertiestoGig.resources
+C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddNametpApplicationUser.resources
