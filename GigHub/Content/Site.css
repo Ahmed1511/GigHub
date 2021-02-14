@@ -70,11 +70,11 @@ textarea {
         -webkit-box-shadow:none;
     }
 
-    .btn{
-        font-size:17px;
-        border-radius:9px;
-        padding:7px 20px;
-    }
+.btn {
+    /*font-size: 17px;
+    padding: 7px 20px;*/
+    border-radius: 9px;
+}
 
     span.field-validation-error {
         color: red;
