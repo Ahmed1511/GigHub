@@ -23,6 +23,14 @@ textarea {
     max-width: 280px;
 }
 
+.voffset{margin-top:5px}
+.voffset1{margin-top: 10px}
+.voffset2{margin-top: 15px}
+.voffset3{margin-top: 20px}
+.voffset4{margin-top: 40px}
+.voffset5{margin-top: 500px}
+
+
 /* BootStrap Overrides*/
 
     .navbar-inverse {
