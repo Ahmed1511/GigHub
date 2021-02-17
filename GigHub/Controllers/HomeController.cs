@@ -14,6 +14,7 @@ namespace GigHub.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
         public ActionResult Index()
         {
             var UpCommingGigs = _context.Gigs
@@ -27,7 +28,6 @@ namespace GigHub.Controllers
                 ShowActions = User.Identity.IsAuthenticated,
                 Heading = "Upcoming Gigs"
             };
-
 
             return View("Gigs", viewModel);
         }

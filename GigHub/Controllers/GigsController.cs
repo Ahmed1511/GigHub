@@ -1,6 +1,7 @@
 ﻿using GigHub.Models;
 using GigHub.ViewModel;
 using Microsoft.AspNet.Identity;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
@@ -49,6 +50,18 @@ namespace GigHub.Controllers
             _context.Gigs.Add(gig);
             _context.SaveChanges();
             return RedirectToAction("Index", "Home");
+        }
+
+        [Authorize]
+        public ActionResult Mine()
+        {
+            var UserID = User.Identity.GetUserId();
+            var MyUpcomingGigs = _context.Gigs
+                .Where(a => a.ArtistID == UserID && a.DateTime > DateTime.Now)
+                .Include(g => g.Genre)
+                .ToList();
+            return View(MyUpcomingGigs);
+
         }
 
         [Authorize]
