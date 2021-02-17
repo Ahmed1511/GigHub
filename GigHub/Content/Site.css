@@ -23,12 +23,12 @@ textarea {
     max-width: 280px;
 }
 
-.voffset{margin-top:5px}
-.voffset1{margin-top: 10px}
-.voffset2{margin-top: 15px}
-.voffset3{margin-top: 20px}
-.voffset4{margin-top: 40px}
-.voffset5{margin-top: 500px}
+    .voffset{margin-top:5px}
+    .voffset1{margin-top: 10px}
+    .voffset2{margin-top: 15px}
+    .voffset3{margin-top: 20px}
+    .voffset4{margin-top: 40px}
+    .voffset5{margin-top: 500px}
 
 
 /* BootStrap Overrides*/
@@ -69,7 +69,8 @@ textarea {
 
     .form-control {
         font-size:17px;
-        padding: 20px 15px ;
+       /* padding: 20px 15px ;*/
+        height:44px;
         border-radius:9px;
     }
     .form-control:focus{
@@ -134,6 +135,15 @@ textarea {
             display: block;
         }
 
-            .gigs > li .details .Genre {
-                font-size:15px;
-            }
+        .gigs > li .details .Genre {
+            font-size:15px;
+        }
+
+        .gigs > li .Actions{
+            font-size:15px;
+            display:none;
+        }
+
+        .gigs > li:hover .Actions{
+            display:block;
+        }

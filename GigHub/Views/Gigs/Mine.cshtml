@@ -17,8 +17,11 @@
                 <span class="Artist">@Gig.Venue</span>
 
                 <span class="Genre">@Gig.Genre.Name</span>
+                <div class="Actions">
+                    <a href="@Url.Action("Edit","Gigs",new { id=Gig.ID})">Edit</a>
+                    <a href="#">Delete</a>
 
-                
+                </div>
 
             </div>
         </li>

@@ -7,6 +7,7 @@ namespace GigHub.ViewModel
 {
     public class GigFormViewModel
     {
+        public int ID { get; set; }
         [Required]
         public string Venue { get; set; }
 
@@ -24,8 +25,18 @@ namespace GigHub.ViewModel
 
         public DateTime GetDateTime()
         {
-            return DateTime.Parse(string.Format("{0} {1}",Date,Time));
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
+
+        public string Heading { get; set; }
+        public string Action { 
+            get
+            { 
+                return (ID != 0) ? "Update" : "Create"; 
+            }
+
+            }
+
 
     }
 }
