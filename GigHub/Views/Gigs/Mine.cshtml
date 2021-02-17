@@ -35,23 +35,43 @@
 
                 var Link = $(e.target);
 
-                bootbox.confirm("Are you sure you want to cancel this gig?", function (result) {
-                    $.ajax({
-                        url: "/api/gigs/" + Link.attr("data-gig-id"),
-                        method: "Delete",
-                    })
-                        .done(function () {
-                            Link.parents("li").fadeOut(function () {
-                                $(this).remove();
-                            });
-                        })
-                        .fail(function () {
-                            alert("Something GO Wrong");
-                        });
+                var dialog = bootbox.dialog({
+                    title: 'Confirm',
+                    message: "<pAre you sure you eant to remove this record?</p>",
+                    size: 'large',
+                    buttons: {
+
+                        ok: {
+                            label: "OK",
+                            className: 'btn-danger',
+                            callback: function () {
+                                $.ajax({
+                                    url: "/api/gigs/" + Link.attr("data-gig-id"),
+                                    method: "Delete",
+                                })
+                                    .done(function () {
+                                        Link.parents("li").fadeOut(function () {
+                                            $(this).remove();
+                                        });
+                                    })
+                                    .fail(function () {
+                                        alert("Something GO Wrong");
+                                    });
+                            }
+                        },
+
+                        cancel: {
+                            label: "cancel",
+                            className: 'btn-default',
+                            callback: function () {
+                                bootbox.hideAll();
+                            }
+                        }
+                       
+                    }
                 });
 
                 
-
             });
         });
 
