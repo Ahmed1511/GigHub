@@ -23,6 +23,30 @@ namespace GigHub.Controllers.Api
             var UserID = User.Identity.GetUserId();
             var gig = _context.Gigs.Single(a => a.ID == id && a.ArtistID == UserID);
             gig.IsCanceled = true;
+            var Notification = new Notification
+            {
+                DateTime= DateTime.Now,
+                Gig = gig,
+                Type = NoteficationType.GigCanceled
+            };
+
+            var Attendees = _context.Attendances
+                .Where(a => a.GigID == gig.ID)
+                .Select(a => a.Attendee)
+                .ToList();
+
+            foreach (var Attendee in Attendees)
+            {
+                var UserNotification = new UserNotification
+                {
+                    User = Attendee,
+                    Notification = Notification
+
+                };
+                _context.UserNotifications.Add(UserNotification);
+                _context.SaveChanges();
+            }
+
             _context.SaveChanges();
             return Ok();
         }
