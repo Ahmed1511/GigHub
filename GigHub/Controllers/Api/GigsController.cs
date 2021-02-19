@@ -1,10 +1,7 @@
 ﻿using GigHub.Models;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace GigHub.Controllers.Api
@@ -25,7 +22,7 @@ namespace GigHub.Controllers.Api
             gig.IsCanceled = true;
             var Notification = new Notification
             {
-                DateTime= DateTime.Now,
+                DateTime = DateTime.Now,
                 Gig = gig,
                 Type = NoteficationType.GigCanceled
             };
@@ -35,16 +32,11 @@ namespace GigHub.Controllers.Api
                 .Select(a => a.Attendee)
                 .ToList();
 
+
+
             foreach (var Attendee in Attendees)
             {
-                var UserNotification = new UserNotification
-                {
-                    User = Attendee,
-                    Notification = Notification
-
-                };
-                _context.UserNotifications.Add(UserNotification);
-                _context.SaveChanges();
+                Attendee.Notify(Notification);
             }
 
             _context.SaveChanges();
