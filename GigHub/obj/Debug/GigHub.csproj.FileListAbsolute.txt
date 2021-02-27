@@ -123,3 +123,4 @@ C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddFo
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceltoGig.resources
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.Update.resources
+C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.UpdateModels.resources
