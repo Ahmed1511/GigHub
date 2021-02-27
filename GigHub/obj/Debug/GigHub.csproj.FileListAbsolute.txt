@@ -122,3 +122,4 @@ C:\Users\DELL\Desktop\GigHubApplication\GigHub\bin\System.Web.Http.WebHost.xml
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceltoGig.resources
 C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
+C:\Users\DELL\Desktop\GigHubApplication\GigHub\obj\Debug\GigHub.Migrations.Update.resources
