@@ -75,6 +75,7 @@ namespace GigHub.Controllers
                 .Include(c => c.Artist)
                 .Include(c => c.Genre)
                 .ToList();
+
             var gigViewModel = new GigsViewModel
             {
                 UpcommingGigs = gigs,
