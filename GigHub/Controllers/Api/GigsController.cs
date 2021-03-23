@@ -19,12 +19,10 @@ namespace GigHub.Controllers.Api
         {
             var UserID = User.Identity.GetUserId();
             var gig = _context.Gigs
-                .Include(g => g.Attendances.Select(a => a.Attendee))
-                .Single(a => a.ID == id && a.ArtistID == UserID);
+                              .Include(g => g.Attendances.Select(a => a.Attendee))
+                              .Single(a => a.ID == id && a.ArtistID == UserID);
 
             gig.Cancel();
-
-
             _context.SaveChanges();
             return Ok();
         }

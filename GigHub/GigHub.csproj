@@ -199,6 +199,10 @@
     <Compile Include="Migrations\202102271840574_UpdateModels.Designer.cs">
       <DependentUpon>202102271840574_UpdateModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103231129230_setUserNotificationmodelkeysprivate.cs" />
+    <Compile Include="Migrations\202103231129230_setUserNotificationmodelkeysprivate.Designer.cs">
+      <DependentUpon>202103231129230_setUserNotificationmodelkeysprivate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\NoteficationType.cs" />
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\UserNotification.cs" />
@@ -363,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102271840574_UpdateModels.resx">
       <DependentUpon>202102271840574_UpdateModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103231129230_setUserNotificationmodelkeysprivate.resx">
+      <DependentUpon>202103231129230_setUserNotificationmodelkeysprivate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
